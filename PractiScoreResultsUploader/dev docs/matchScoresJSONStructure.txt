@@ -1,0 +1,28 @@
+{"match_id":"576eb7f9-2b95-4750-a8a5-7c0cca7005be",
+"match_scores":[
+	{"stage_number":"4",
+	"stage_uuid":"311693d6-279d-463e-9dbf-42419d13dab3",
+	"stage_stagescores":[
+		{"shtr":"da87e7a7-41e8-4dd5-ab2d-d7379ab6b2cd",	SHOOTER ID
+		"mod":"2017-12-24 14:16:50.139",				MODIFIED DATE AND TIME
+		"popm":1,										POPPER MISSES
+		"poph":0,										POPPER HITS
+		"popnpm":1,										POPPER NO-PENALTY MISSES
+		"rawpts":36,									POINTS (hits, not stage points)
+		"str":[12.0],									TIME
+		"ts":[16777217,									POINTS FOR EACH PAPER TARGET
+			1048832,1052672,2097152,
+			2162688,1048577,1048832,
+			1052672,65538,66048,73728,
+			2162688],
+		"meta":[
+			{"k":"ss","v":"eNoDAAAAAAE=",
+			"t":"2017-12-24 14:16:50.088"}],
+		"udid":"83722316-0472-4bb6-bf44-603720b5ab47",	DEVICE UDID	
+		"dname":"Android Device"}]}						DEVICE NAME
+		]
+	}
+	]
+	
+	
+
