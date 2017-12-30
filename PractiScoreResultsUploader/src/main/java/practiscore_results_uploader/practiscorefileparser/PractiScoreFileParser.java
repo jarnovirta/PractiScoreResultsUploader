@@ -15,23 +15,24 @@ import practiscore_results_uploader.domain.MatchScore;
 import practiscore_results_uploader.domain.StageScore;
 
 public class PractiScoreFileParser {
-	public static void loadScoreData() {
+	public static MatchScore loadScoreData() {
+		MatchScore matchScore = null;
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			MatchScore match = objectMapper.readValue(readScoreDataFromFile(), new TypeReference<MatchScore>() {
+			matchScore = objectMapper.readValue(readScoreDataFromFile(), new TypeReference<MatchScore>() {
 			});
-			System.out.println("Read match " + match.getMatchId());
-			System.out.println("StageScores count: " + match.getStageScores().size());
-			for (StageScore stageScore : match.getStageScores()) {
-				System.out.println("stage" + stageScore.getStageNumber() + " : " + stageScore.getScoreCards().size()
-						+ " scorecards");
-				System.out.println(
-						"First scorecard modified " + stageScore.getScoreCards().get(0).getModified().getTime());
-			}
+//			System.out.println("Read match " + matchScore.getMatchId());
+//			System.out.println("StageScores count: " + matchScore.getStageScores().size());
+//			for (StageScore stageScore : matchScore.getStageScores()) {
+//				System.out.println("stage" + stageScore.getStageNumber() + " : " + stageScore.getScoreCards().size()
+//						+ " scorecards");
+//				System.out.println(
+//						"First scorecard modified " + stageScore.getScoreCards().get(0).getModified().getTime());
+//			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		return matchScore;
 	}
 
 	private static String readScoreDataFromFile() throws IOException {
