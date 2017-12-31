@@ -14,7 +14,7 @@ import practiscore_results_uploader.domain.MatchScore;
 
 public class HttpService {
 	
-	private static String url = "http://localhost:8080/IPSCResultServer/api/matches";
+	private static String url = "http://92.168.43.105:8080/IPSCResultServer/api/matches";
 	
 	public static void sendMatchScore(MatchScore matchScore) {
 	ObjectMapper objectMapper = new ObjectMapper();

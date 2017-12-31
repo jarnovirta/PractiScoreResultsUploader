@@ -1,6 +1,7 @@
 package practiscore_results_uploader.service;
 
 import java.io.File;
+import java.nio.file.Files;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -37,5 +38,19 @@ public class FileService {
 			e.printStackTrace();
 		}
 		return matchScore;
+	}
+	public static void testDirectoryListing() {
+		try {
+		File currentDir = new File("");
+		String absolutePath = currentDir.getAbsolutePath();
+		Files.list(new File(absolutePath).toPath())
+        .limit(10)
+        .forEach(path -> {
+            System.out.println(path);
+        });
+		}
+		catch (Exception e) {
+			
+		}
 	}
 }
