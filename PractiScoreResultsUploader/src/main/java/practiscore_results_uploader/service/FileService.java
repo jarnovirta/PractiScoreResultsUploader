@@ -24,6 +24,7 @@ public class FileService {
 				Thread.sleep(1000);
 				System.out.println("Checking file");
 				File exportFile = new File("scores.psc");
+				
 				Long fileModifiedTime = exportFile.lastModified();
 				if (lastModified != null && lastModified.equals(fileModifiedTime)) continue;
 				System.out.println("File modified!");

@@ -10,11 +10,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Match {
 
+	private Long id;
+	
 	@JsonProperty("match_id")
 	private String uuid;
 
-	@JsonProperty("match_name")
-	private String name;
+//	@JsonProperty("match_name")
+//	private String name;
 	
 	@JsonProperty("match_level")
 	private String level;
@@ -29,7 +31,6 @@ public class Match {
 
 	@JsonProperty("match_cats")
 	private List<String> divisions;
-
 	
 	@JsonProperty("match_stages")
 	private List<Stage> stages;
@@ -45,13 +46,13 @@ public class Match {
 		this.uuid = uuid;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 
 	public Calendar getDate() {
 		return date;
@@ -100,4 +101,13 @@ public class Match {
 	public void setCompetitors(List<Competitor> competitors) {
 		this.competitors = competitors;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 }
