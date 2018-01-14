@@ -1,6 +1,5 @@
 package practiscore_results_uploader.service;
 
-import org.apache.http.Consts;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
@@ -8,7 +7,6 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.params.CoreProtocolPNames;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

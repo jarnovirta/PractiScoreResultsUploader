@@ -15,8 +15,8 @@ public class Match {
 	@JsonProperty("match_id")
 	private String uuid;
 
-//	@JsonProperty("match_name")
-//	private String name;
+	@JsonProperty("match_name")
+	private String name;
 	
 	@JsonProperty("match_level")
 	private String level;
@@ -46,13 +46,13 @@ public class Match {
 		this.uuid = uuid;
 	}
 
-//	public String getName() {
-//		return name;
-//	}
-//
-//	public void setName(String name) {
-//		this.name = name;
-//	}
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public Calendar getDate() {
 		return date;

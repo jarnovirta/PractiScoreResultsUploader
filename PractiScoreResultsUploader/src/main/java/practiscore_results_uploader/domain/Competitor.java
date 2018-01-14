@@ -4,9 +4,12 @@ import java.util.Calendar;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(Include.NON_NULL)
 public class Competitor {
 	
 	@JsonProperty("sh_uuid")
@@ -21,8 +24,14 @@ public class Competitor {
 	@JsonProperty("sh_ln")
 	private String lastName;
 	
+	@JsonProperty("sh_id")
+	private int ipscAlias;
+		
 	@JsonProperty("sh_dvp")
 	private String division;
+	
+	@JsonProperty("sh_ctgs")
+	private String practiScoreCategoryString;
 	
 	@JsonProperty("sh_cc")
 	private String country;
@@ -42,6 +51,9 @@ public class Competitor {
 	
 	@JsonProperty("sh_pf")
 	private String powerFactor;
+	
+	@JsonProperty("sh_sqd")
+	private int squad;
 
 	public String getUuid() {
 		return uuid;
@@ -129,5 +141,29 @@ public class Competitor {
 
 	public void setPowerFactor(String powerFactor) {
 		this.powerFactor = powerFactor;
+	}
+
+	public int getSquad() {
+		return squad;
+	}
+
+	public void setSquad(int squad) {
+		this.squad = squad;
+	}
+
+	public int getIpscAlias() {
+		return ipscAlias;
+	}
+
+	public void setIpscAlias(int ipscAlias) {
+		this.ipscAlias = ipscAlias;
+	}
+
+	public String getPractiScoreCategoryString() {
+		return practiScoreCategoryString;
+	}
+
+	public void setPractiScoreCategoryString(String practiScoreCategoryString) {
+		this.practiScoreCategoryString = practiScoreCategoryString;
 	}
 }
