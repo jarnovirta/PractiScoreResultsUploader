@@ -20,13 +20,13 @@ public class FileService {
 	public static MatchScore watchPractiScoreExportFileChange() {
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
-			while(true) {
-				Thread.sleep(1000);
+//			while(true) {
+//				Thread.sleep(1000);
 				System.out.println("Checking file");
 				File exportFile = new File("scores.psc");
 				
 				Long fileModifiedTime = exportFile.lastModified();
-				if (lastModified != null && lastModified.equals(fileModifiedTime)) continue;
+//				if (lastModified != null && lastModified.equals(fileModifiedTime)) continue;
 				System.out.println("File modified!");
 				PractiScoreExportFileDataObject exportFileDataObject = PractiScoreFileParser.parse(exportFile);
 				if (exportFileDataObject != null) {
@@ -42,7 +42,7 @@ public class FileService {
 					HttpService.sendMatchScore(matchScore);
 					
 				}
-			}
+//			}
 
 		} catch (Exception e) {
 			e.printStackTrace();

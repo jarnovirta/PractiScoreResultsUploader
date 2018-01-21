@@ -24,6 +24,12 @@ public class Stage {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.SSS")
 	private Calendar modifiedDate;
 
+	@JsonProperty("stage_targets")
+	private Target[] targets; 
+
+	@JsonProperty("stage_poppers")
+	private int poppers;
+	
 	public String getUuid() {
 		return uuid;
 	}
@@ -64,5 +70,20 @@ public class Stage {
 		this.modifiedDate = modifiedDate;
 	}
 
-	
+	public Target[] getTargets() {
+		return targets;
+	}
+
+	public void setTargets(Target[] targets) {
+		this.targets = targets;
+	}
+
+	public int getPoppers() {
+		return poppers;
+	}
+
+	public void setPoppers(int poppers) {
+		this.poppers = poppers;
+	}
+
 }

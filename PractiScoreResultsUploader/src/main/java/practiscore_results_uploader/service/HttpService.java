@@ -4,7 +4,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 
@@ -42,8 +41,9 @@ public class HttpService {
 	        request.setEntity(params);
 	        System.out.println("Sending JSON to URL: " + url);
 	        HttpResponse response = httpClient.execute(request);
-	        String responseString = new BasicResponseHandler().handleResponse(response);            
-	        System.out.println("JSON sent. Response : " + responseString);
+	        System.out.println("JSON sent. Response status: " + response.getStatusLine());
+//	        String responseString = new BasicResponseHandler().handleResponse(response);            
+//	        System.out.println("JSON sent. Response : " + responseString);
 	        
 	    } catch (Exception ex) {
 	    	ex.printStackTrace();
